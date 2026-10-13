@@ -14,6 +14,7 @@ import {
   Compass
 } from 'lucide-react';
 import { UserRole } from '@/types';
+import { getAssetUrl } from '@/lib/utils';
 
 export type NavTab = 'overview' | 'lectures' | 'exercises' | 'students' | 'ai-studio' | 'analytics';
 
@@ -83,7 +84,7 @@ export const Sidebar: React.FC<SidebarProps> = ({
           <div className="flex items-center gap-2.5 min-w-0">
             <div className="relative shrink-0">
               <img
-                src="/professor-bendjelloul.png"
+                src={getAssetUrl('/professor-bendjelloul.png')}
                 alt="أ.د. بن جلول مختار"
                 className="w-11 h-11 rounded-xl object-cover ring-2 ring-amber-500/40"
               />
@@ -95,7 +96,7 @@ export const Sidebar: React.FC<SidebarProps> = ({
             </div>
           </div>
           <div className="w-9 h-9 rounded-xl overflow-hidden ring-1 ring-amber-400/40 shrink-0 bg-white/5 p-0.5" title="شعار جامعة ابن خلدون تيارت - لسانيات عربية">
-            <img src="/logo.png" alt="شعار" className="w-full h-full object-cover rounded-lg" />
+            <img src={getAssetUrl('/logo.png')} alt="شعار" className="w-full h-full object-cover rounded-lg" />
           </div>
         </div>
 

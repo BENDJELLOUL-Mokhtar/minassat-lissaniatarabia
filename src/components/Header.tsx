@@ -2,6 +2,7 @@
 
 import React from 'react';
 import { UserRole, Course } from '@/types';
+import { getAssetUrl } from '@/lib/utils';
 import { 
   BookOpen, 
   Sparkles, 
@@ -56,7 +57,7 @@ export const Header: React.FC<HeaderProps> = ({
         <div className="flex items-center gap-3.5">
           <div className="relative flex items-center justify-center w-12 h-12 rounded-2xl overflow-hidden ring-2 ring-amber-500/50 shadow-lg shadow-amber-950/40 bg-white/5 p-0.5 shrink-0">
             <img
-              src="/logo.png"
+              src={getAssetUrl('/logo.png')}
               alt="شعار الأستاذ الدكتور بن جلول مختار"
               className="w-full h-full object-cover rounded-xl"
             />
@@ -143,7 +144,7 @@ export const Header: React.FC<HeaderProps> = ({
             <img
               src={
                 currentRole === 'professor'
-                  ? '/professor-bendjelloul.png'
+                  ? getAssetUrl('/professor-bendjelloul.png')
                   : 'https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?auto=format&fit=crop&w=120&q=80'
               }
               alt="أ.د. بن جلول مختار"

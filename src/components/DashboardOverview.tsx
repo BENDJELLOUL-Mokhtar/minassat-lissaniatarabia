@@ -2,6 +2,7 @@
 
 import React, { useState } from 'react';
 import { Course, Lecture, Exercise, Student, Announcement, UserRole } from '@/types';
+import { getAssetUrl } from '@/lib/utils';
 import { 
   BookOpen, 
   FileCode2, 
@@ -147,14 +148,14 @@ export const DashboardOverview: React.FC<DashboardOverviewProps> = ({
               <div className="p-4 rounded-[22px] bg-[#0b101d]/95 backdrop-blur-md text-center space-y-3">
                 <div className="relative mx-auto w-36 h-36 rounded-2xl overflow-hidden ring-4 ring-amber-500/50 shadow-xl bg-gray-900 group">
                   <img
-                    src="/professor-bendjelloul.png"
+                    src={getAssetUrl('/professor-bendjelloul.png')}
                     alt="الأستاذ الدكتور بن جلول مختار"
                     className="w-full h-full object-cover object-top hover:scale-105 transition-transform duration-300"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent pointer-events-none"></div>
                   {/* Official Emblem Stamp Badge */}
                   <div className="absolute bottom-1.5 left-1.5 w-9 h-9 rounded-full ring-2 ring-amber-400 overflow-hidden shadow-lg bg-black/40 backdrop-blur-sm">
-                    <img src="/logo.png" alt="شعار المخبر" className="w-full h-full object-cover" />
+                    <img src={getAssetUrl('/logo.png')} alt="شعار المخبر" className="w-full h-full object-cover" />
                   </div>
                 </div>
 
@@ -186,7 +187,7 @@ export const DashboardOverview: React.FC<DashboardOverviewProps> = ({
             <div className="flex items-center justify-between mb-4">
               <div className="flex items-center gap-3">
                 <div className="w-12 h-12 rounded-2xl overflow-hidden ring-2 ring-amber-500/50 p-0.5 bg-white/5 shadow-md shrink-0">
-                  <img src="/logo.png" alt="شعار جامعة تيارت" className="w-full h-full object-cover rounded-xl" />
+                  <img src={getAssetUrl('/logo.png')} alt="شعار جامعة تيارت" className="w-full h-full object-cover rounded-xl" />
                 </div>
                 <div>
                   <h2 className="text-base font-bold text-white">تسجيل الدخول للمنصة</h2>

@@ -18,6 +18,7 @@ import {
 } from 'lucide-react';
 
 import { Student, Professor } from '@/types';
+import { getAssetUrl } from '@/lib/utils';
 
 interface AuthModalsProps {
   type: 'student-reg' | 'professor-reg' | null;
@@ -149,7 +150,7 @@ export const AuthModals: React.FC<AuthModalsProps> = ({
         {/* Modal Header */}
         <div className="flex items-center gap-3.5">
           <div className="w-14 h-14 rounded-2xl overflow-hidden ring-2 ring-amber-500/50 p-0.5 bg-white/5 shadow-lg shrink-0">
-            <img src="/logo.png" alt="شعار الأستاذ الدكتور بن جلول مختار" className="w-full h-full object-cover rounded-xl" />
+            <img src={getAssetUrl('/logo.png')} alt="شعار الأستاذ الدكتور بن جلول مختار" className="w-full h-full object-cover rounded-xl" />
           </div>
           <div>
             <h3 className="text-lg font-bold text-white">
